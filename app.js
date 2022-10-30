@@ -126,6 +126,8 @@ var taskCompleted=function(){
     var listItem=this.parentNode;
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
+    var label=this.parentNode.querySelector(".task-label"); 
+    label.classList.add("task-label_done");
 
 }
 
@@ -138,6 +140,8 @@ var taskIncomplete=function(){
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
+    var label=this.parentNode.querySelector(".task-label"); 
+    label.classList.remove("task-label_done");
 }
 
 
