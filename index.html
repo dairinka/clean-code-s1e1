@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="page">
    <div class="header">
      <img class="header__img" src="./eisenhower-matrix.jpg">
      <a class="header__more-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
@@ -19,11 +19,11 @@
        </div>
      </p>
      <h3 class="section__header">Todo</h3>
-     <ul id="to-do-task">
+     <ul class="task-list" id="to-do-task">
        <li class="section__row">
          <input class="checkbox" type="checkbox">
          <label class="section__task">Pay Bills</label>
-         <input class="section__task section__task_input-edit-task" type="text">
+         <input class="section__task section__task_edit-task" type="text">
          <button class="section__btn section__btn_edit">Edit</button>
          <button class="delete">
            <img src="./remove.svg">
@@ -40,7 +40,7 @@
        </li>
      </ul>
      <h3 class="section__header">Completed</h3>
-     <ul id="done-task">
+     <ul class="task-list" id="done-task">
        <li class="section__row">
          <input class="checkbox" type="checkbox" checked>
          <label class="section__task">See the Doctor</label>
