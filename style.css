@@ -39,14 +39,14 @@
     display: flex;
 }
 .task-list {
-    margin:0;
+    margin: 0;
     padding: 0px;
 }
 .section__row {
-    list-style:none;
+    list-style: none;
 }
-.section__input, .section__btn, .section__btn_edit{
-    outline:none;
+.section__input, .section__btn, .section__btn_edit {
+    outline: none;
 }
 .section__btn, .section__btn_edit, .delete {
     background: none;
@@ -139,14 +139,14 @@
 
 /* Edit Task */
 .section__input_edit-task {
-    display:none
+    display: none
 }
 
 .section__row_edit-mode .section__input {
-    display:inline-block;
-    width:224px
+    display: inline-block;
+    width: 224px
 }
 
 .section__row_edit-mode .task-label {
-    display:none;
+    display: none;
 }
