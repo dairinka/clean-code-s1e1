@@ -26,7 +26,8 @@
     width: 500px;
     margin: 0 auto 0;
 }
-.section__task {
+.section__task,
+.task-label {
     width: 56%;
     display: inline-block;
     flex-grow: 1
