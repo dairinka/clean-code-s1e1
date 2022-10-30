@@ -12,8 +12,8 @@
    </div>
    <div class="main-wrapper">
      <p class="section section_add-item">
-       <label class="section__header" for="new-task">Add Item</label>
-       <div class="section__row">
+       <label class="section__header section__header_new-task" for="new-task">Add Item</label>
+       <div class="section__row section__row_new-task">
          <input class="section__input section__input_new-task" id="new-task" type="text" >
          <button class="section__btn">Add</button>
        </div>
@@ -26,7 +26,7 @@
          <input class="section__input section__input_edit-task" type="text">
          <button class="section__btn section__btn_edit">Edit</button>
          <button class="delete">
-           <img src="./remove.svg">
+           <img class="btn-img" src="./remove.svg">
          </button>
        </li>
        <li class="section__row section__row_edit-mode">
@@ -35,7 +35,7 @@
          <input class="section__input section__input_edit-task" type="text" value="Go Shopping">
          <button class="section__btn section__btn_edit">Save</button>
          <button class="delete">
-           <img src="./remove.svg">
+           <img class="btn-img" src="./remove.svg">
          </button>
        </li>
      </ul>
@@ -43,11 +43,11 @@
      <ul class="task-list" id="done-task">
        <li class="section__row">
          <input class="checkbox" type="checkbox" checked>
-         <label class="task-label">See the Doctor</label>
+         <label class="task-label task-label_done">See the Doctor</label>
          <input class="section__input section__input_edit-task" type="text">
          <button class="section__btn section__btn_edit">Edit</button>
          <button class="delete">
-           <img src="./remove.svg">
+           <img class="btn-img" src="./remove.svg">
          </button>
        </li>
      </ul>
