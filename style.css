@@ -26,7 +26,7 @@
     width: 500px;
     margin: 0 auto 0;
 }
-.section__task,
+.section__input,
 .task-label {
     width: 56%;
     display: inline-block;
