@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.querySelectorAll(".section__btn")[0];//first button
 var incompleteTaskHolder=document.getElementById("to-do-task");//ul of #to-do-task
 var completedTasksHolder=document.getElementById("done-task");//done-task
 
@@ -85,8 +85,8 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var editInput=listItem.querySelector('.section__input_edit-task');
+    var label=listItem.querySelector(".task-label");
     var editBtn=listItem.querySelector(".section__btn_edit");
     var containsClass=listItem.classList.contains("section__row_edit-mode");
     //If class of the parent is .section__row_edit-mode
@@ -158,9 +158,9 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
+    var checkBox=taskListItem.querySelector(".checkbox");
     var editButton=taskListItem.querySelector(".section__btn_edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var deleteButton=taskListItem.querySelector(".delete");
 
 
     //Bind editTask to edit button.
