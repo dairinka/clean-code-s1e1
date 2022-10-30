@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.querySelectorAll(".section__btn")[0];//first button
+var addButton=document.querySelectorAll(".task__btn")[0];//first button
 var incompleteTaskHolder=document.getElementById("to-do-task");//ul of #to-do-task
 var completedTasksHolder=document.getElementById("done-task");//done-task
 
@@ -34,19 +34,19 @@ var createNewTaskElement=function(taskString){
 
     listItem.className="section__row";
     label.innerText=taskString;
-    label.className="task-label";
+    label.className="task__label";
     deleteButtonImg.className="btn-img";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="checkbox";
+    checkBox.className="task__checkbox";
     editInput.type="text";
-    editInput.className="section__input_edit-task";
+    editInput.className="task__input_edit-task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="section__btn_edit";
+    editButton.className="task__btn_edit";
 
-    deleteButton.className="delete";
+    deleteButton.className="task__btn_delete";
     deleteButtonImg.src="./remove.svg";
     deleteButton.appendChild(deleteButtonImg);
 
@@ -85,14 +85,14 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector(".section__input_edit-task");
-    var label=listItem.querySelector(".task-label");
-    var editBtn=listItem.querySelector(".section__btn_edit");
-    var containsClass=listItem.classList.contains("section__row_edit-mode");
-    //If class of the parent is .section__row_edit-mode
+    var editInput=listItem.querySelector(".task__input_edit-task");
+    var label=listItem.querySelector(".task__label");
+    var editBtn=listItem.querySelector(".task__btn_edit");
+    var containsClass=listItem.classList.contains("task_edit-mode");
+    //If class of the parent is .task_edit-mode
     if(containsClass){
 
-        //switch to .section__row_edit-mode
+        //switch to .task_edit-mode
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
@@ -101,8 +101,8 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .section__row_edit-mode on the parent.
-    listItem.classList.toggle("section__row_edit-mode");
+    //toggle .task_edit-mode on the parent.
+    listItem.classList.toggle("task_edit-mode");
 };
 
 
@@ -126,8 +126,8 @@ var taskCompleted=function(){
     var listItem=this.parentNode;
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
-    var label=this.parentNode.querySelector(".task-label"); 
-    label.classList.add("task-label_done");
+    var label=this.parentNode.querySelector(".task__label"); 
+    label.classList.add("task__label_done");
 
 }
 
@@ -140,8 +140,8 @@ var taskIncomplete=function(){
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
-    var label=this.parentNode.querySelector(".task-label"); 
-    label.classList.remove("task-label_done");
+    var label=this.parentNode.querySelector(".task__label"); 
+    label.classList.remove("task__label_done");
 }
 
 
@@ -162,9 +162,9 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector(".checkbox");
-    var editButton=taskListItem.querySelector(".section__btn_edit");
-    var deleteButton=taskListItem.querySelector(".delete");
+    var checkBox=taskListItem.querySelector(".task__checkbox");
+    var editButton=taskListItem.querySelector(".task__btn_edit");
+    var deleteButton=taskListItem.querySelector(".task__btn_delete");
 
 
     //Bind editTask to edit button.
