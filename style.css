@@ -28,6 +28,10 @@
 
 }
 
+.section_add-item {
+  margin: 11px auto;
+}
+
 .main-wrapper {
   display: block;
   width: 500px;
@@ -42,17 +46,9 @@
   flex-grow: 1;
 }
 
-.section__row {
-  display: flex;
-}
-
 .section__list {
   margin: 0;
   padding: 0px;
-}
-
-.section__row {
-  list-style: none;
 }
 
 .task__input,
@@ -122,12 +118,13 @@
 /* Task list */
 .section__row {
   overflow: hidden;
-  padding: 20px 0;
+  padding: 18px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
   vertical-align: middle;
+  list-style: none;
 }
 
 .task_new{
